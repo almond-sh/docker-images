@@ -14,3 +14,6 @@ RUN curl -Lo /usr/local/bin/coursier https://github.com/coursier/coursier/releas
     chmod +x /usr/local/bin/coursier
 
 USER $NB_UID
+
+# ensure the JAR of the CLI is in the coursier cache, in the image
+RUN /usr/local/bin/coursier --help
