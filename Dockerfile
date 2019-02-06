@@ -10,7 +10,7 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN curl -L -o /usr/local/bin/coursier https://git.io/vgvpD && \
+RUN curl -Lo /usr/local/bin/coursier https://github.com/coursier/coursier/releases/download/v1.1.0-M11/coursier && \
     chmod +x /usr/local/bin/coursier
 
 USER $NB_UID
