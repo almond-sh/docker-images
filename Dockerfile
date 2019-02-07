@@ -9,6 +9,9 @@ RUN coursier bootstrap \
       -r jitpack \
       -i user -I user:sh.almond:scala-kernel-api_$SCALA_VERSION:$ALMOND_VERSION \
       sh.almond:scala-kernel_$SCALA_VERSION:$ALMOND_VERSION \
+      -V org.scala-lang:scala-library:$SCALA_VERSION \
+      -V org.scala-lang:scala-compiler:$SCALA_VERSION \
+      -V org.scala-lang:scala-reflect:$SCALA_VERSION \
       --default=true --sources \
       -o almond && \
     ./almond --install --log info --metabrowse && \
