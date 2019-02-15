@@ -2,8 +2,8 @@ FROM almondsh/almond:coursier
 
 USER $NB_UID
 
-ENV SCALA_VERSION {SCALA_VERSION}
-ENV ALMOND_VERSION {VERSION}
+ENV SCALA_VERSION 2.12.8
+ENV ALMOND_VERSION 0.3.0
 
 RUN coursier bootstrap \
       -r jitpack \
