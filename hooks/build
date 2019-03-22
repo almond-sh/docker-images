@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+source ./vars.sh
+
+docker build --build-arg ALMOND_VERSION=$ALMOND_VERSION --build-arg SCALA_VERSIONS="$SCALA211_VERSION $SCALA212_VERSION" -t $IMAGE_NAME .
+docker build --build-arg ALMOND_VERSION=$ALMOND_VERSION --build-arg SCALA_VERSIONS="$SCALA211_VERSION" -t $IMAGE_NAME-scala-$SCALA211_VERSION .
+docker build --build-arg ALMOND_VERSION=$ALMOND_VERSION --build-arg SCALA_VERSIONS="$SCALA212_VERSION" -t $IMAGE_NAME-scala-$SCALA212_VERSION .

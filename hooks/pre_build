@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+git clone https://github.com/almond-sh/almond.git -b $SOURCE_BRANCH  --depth 1

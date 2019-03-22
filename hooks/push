@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+source ./vars.sh
+
+docker push $IMAGE_NAME-scala-$SCALA211_VERSION
+docker push $IMAGE_NAME-scala-$SCALA212_VERSION
+docker push $IMAGE_NAME
+
+docker tag $IMAGE_NAME $DOCKER_REPO:latest
+docker push $DOCKER_REPO:latest
