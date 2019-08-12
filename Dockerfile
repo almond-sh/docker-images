@@ -10,7 +10,7 @@ RUN apt-get -y update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-RUN curl -Lo /usr/local/bin/coursier https://github.com/coursier/coursier/releases/download/v1.1.0-M11/coursier && \
+RUN curl -Lo /usr/local/bin/coursier https://github.com/coursier/coursier/releases/download/v2.0.0-RC3-2/coursier && \
     chmod +x /usr/local/bin/coursier
 
 USER $NB_UID
